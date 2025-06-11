@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de reservas de salas de estudio - Universidad de Talca">
+  <title>Reserva de Salas - Universidad de Talca</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Encabezado del sitio -->
+  <header>
+    <h1>Reserva de Salas de Estudio</h1>
+    <p>Universidad de Talca</p>
+  </header>
+
+  <!-- Navegación principal -->
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Reservar</a>
+    <a href="#">Mis Reservas</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <section>
+      <h2>Formulario de Reserva</h2>
+      <p>Por favor completa el siguiente formulario para reservar una sala de estudio.</p>
+
+      <!-- Formulario con validaciones HTML5 -->
+      <form action="#" method="post">
+        <!-- Campo nombre -->
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+
+        <!-- Campo correo -->
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ej: jperez@alumnos.utalca.cl">
+
+        <!-- Selección de sala -->
+        <label for="sala">Sala a reservar:</label>
+        <select id="sala" name="sala" required>
+          <option value="">-- Selecciona una sala --</option>
+          <option value="sala1">Sala 101 - Biblioteca Central</option>
+          <option value="sala1">Sala 102 - Biblioteca Central</option>
+          <option value="sala1">Sala 103 - Biblioteca Central</option>
+          <option value="sala1">Sala 104 - Biblioteca Central</option>
+          <option value="sala1">Sala 105 - Biblioteca Central</option>
+          <option value="sala2">Sala 201 - Facultad de Economía</option>
+          <option value="sala2">Sala 203 - Facultad de Economía</option>
+          <option value="sala2">Sala 204 - Facultad de Economía</option>
+          <option value="sala2">Sala 205 - Facultad de Economía</option>
+          <option value="sala2">Sala 206 - Facultad de Economía</option>
+          <option value="sala2">Sala 207 - Facultad de Economía</option>
+          <option value="sala2">Sala 208 - Facultad de Economía</option>
+          <option value="sala3">Sala 301 - CTA</option>
+          <option value="sala3">Sala 302 - CTA</option>
+          <option value="sala3">Sala 303 - CTA</option>
+          <option value="sala3">Sala 304 - CTA</option>
+          <option value="sala3">Sala 305 - CTA</option>
+          <option value="sala3">Sala 306 - CTA</option>
+        </select>
+
+        <!-- Fecha -->
+        <label for="fecha">Fecha de reserva:</label>
+        <input type="date" id="fecha" name="fecha" required min="2025-06-10">
+
+        <!-- Hora -->
+        <label for="hora">Hora de inicio:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <!-- Comentarios -->
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ej: Necesito proyector o pizarra..."></textarea>
+
+        <!-- Botón de envío -->
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Universidad de Talca - Facultad de Economía y Negocios</p>
+  </footer>
+
+</body>
+</html>
