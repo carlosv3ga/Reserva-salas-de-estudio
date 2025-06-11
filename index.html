@@ -36,12 +36,27 @@
     <input type = "password" placeholder="Contraseña" maxlength="10" name="contraseña" id="contraseña" required>
     <br>
     
-    <a href="Paginas/Reservas.html">Ingresar</a>
+    <button type="button" onclick="validarFormulario()">Ingresar</button>
     
 
   </form>
 
   </div>
+
+  <script>
+    function validarFormulario() {
+      const email = document.getElementById('email').value.trim();
+      const contraseña = document.getElementById('contraseña').value.trim();
+
+      if (email === '' || contraseña === '') {
+        alert('Por favor complete todos los campos.');
+        return;
+      }
+
+      // Redireccionar a Reservas.html si todo está correcto
+      window.location.href = "Paginas/Reservas.html";
+    }
+  </script>
 
 </body> 
 
