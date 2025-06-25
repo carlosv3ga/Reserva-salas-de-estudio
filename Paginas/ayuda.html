@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Ayuda</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body class = "ayuda">
+
+  <h2>¿En qué podemos ayudarte?</h2> 
+  <form class="ayuda" action="#" method="post">
+    <label class= "ayuda" for="problema">Tipo de problema:</label>
+    <select id="problema" name="problema" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="reserva">No puedo hacer la reserva</option>
+      <option value="error">Error en la página</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <label for="descripcion">Descripción del problema:</label>
+    <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+   <a href="ayuda.html" target="_blank">
+  <button class="boton-ayuda" type="button">¿Necesitas ayuda? 📩</button>  </a>
+  </form>
+</body>
+</html>

@@ -1,0 +1,225 @@
+h2 {
+  text-align: center; /* Alineación centrada para títulos secundarios */
+  font-size: x-large;
+}
+h3 {
+  text-align: center;
+  font-size: medium; /* Alineación centrada para títulos terciarios */
+}
+
+/* Box-sizing para todos los elementos */
+*, *::before, *::after {
+  box-sizing: border-box; 
+}
+
+/* Estilos para el elemento body */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /*Fuentes princioales */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Espaciado entre líneas */
+  background-color: #f4f6fa;
+  color: #222;
+}
+
+header, footer { /* Encabezado y pie de página */
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 4px solid #005999;
+}
+
+footer { /* Pie de página */
+  border-top: 4px solid #005999;
+  margin-top: 2rem;
+}
+
+nav { /* Barra de navegación */
+  background-color: #005999;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-bottom: 2px solid #003366;
+}
+
+nav a { /* Diseño de enlaces de navegación */
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover,
+nav a:focus { /* Efecto hover y focus en los enlaces */
+  background: #003366;
+}
+
+/* Combinador hijo directo y pseudoclase */
+main > section:first-child { /* Primera sección dentro de main */
+  margin-top: 2rem;
+  border: 2px solid #005999;
+  border-radius: 10px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* Formulario */
+form {
+  max-width: 500px; /*Limite del ancho del formulario */
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+label {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 500;
+}
+
+input, select, textarea, button {
+  width: 100%; /* Ancho */
+  padding: 0.6rem; /* Relleno */
+  margin-top: 0.4rem; /* Margen superior */
+  
+  border: 1px solid #bbb; /* Borde */
+  border-radius: 4px; /* Radio del borde */
+  font-size: 1rem; /* Tamaño de fuente */
+}
+
+input:focus, select:focus, textarea:focus { /* Efectos de enfoque*/
+  border-color: #005999;
+  outline: none;
+}
+
+button { /*diseño y efecto de botónes y transición*/
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button:hover { /* Efecto hover en botones */
+  background-color: #005999;
+}
+
+/* Pseudoelemento para decoración en el título principal */
+h1::after { 
+  content: "";
+  display: block;
+  width: 60px; /* Ancho */
+  height: 4px;
+  background: #005999;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Pseudoclase para resaltar el primer input del formulario */
+form input:first-child {
+  border-color: #005999;
+}
+
+
+.flotante { /*Elemento flotante*/
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin: 0 1.5rem 1rem 0;
+  border: 2px solid #005999;
+  border-radius: 8px;
+  background: #eaeaea;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+/*Boton de ayuda siempre visible*/
+.boton-ayuda {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #005999;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  width: auto;
+}
+.boton-ayuda:hover {
+  background: #003366;
+}
+
+/* Adaptabilidad de la pantalla */
+@media (max-width: 700px) { /*Reduce el tamaño de pantalla cuando el ancho es menor o igual a 700px */
+  header, footer, nav, main > section { 
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  form { /* Formulario más compacto en pantallas pequeñas */
+    padding: 1rem 0.5rem;
+  }
+  .flotante { /* Elemento flotante más pequeño */
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+.ayuda{ /* Estilo para la sección de ayuda */
+  form {
+  max-width: 550px;
+  margin: auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: bold;
+}
+
+select, textarea, button {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+select:focus, textarea:focus {
+  border-color: #005999;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 89, 153, 0.3);
+}
+
+/* Botón enviar */
+button[type="submit"] {
+  background-color: #003366;
+  color: white;
+  border: none;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005999;
+}
+}
